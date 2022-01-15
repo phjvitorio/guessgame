@@ -14,19 +14,19 @@ document.querySelector('.check').addEventListener('click', function () {
   let guess = document.querySelector('.guess').value;
 
   if (guess > answer) {
-    document.querySelector('.message').textContent = 'Too high!';
+    document.querySelector('.message').textContent = '📈 Muito alto!';
     score -= 1;
     document.querySelector('.score').innerHTML = score;
   }
 
   if (guess < answer) {
-    document.querySelector('.message').textContent = 'Too low!';
+    document.querySelector('.message').textContent = '📉 Muito baixo!';
     score -= 1;
     document.querySelector('.score').innerHTML = score;
   }
 
   if (guess == answer) {
-    document.querySelector('.message').textContent = 'Correct number!';
+    document.querySelector('.message').textContent = '✨ Numero correto!';
     document.querySelector('.highscore').innerHTML = score;
     document.querySelector('.number').textContent = answer;
 
