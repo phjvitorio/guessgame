@@ -13,14 +13,9 @@ let score = 20;
 document.querySelector('.check').addEventListener('click', function () {
   let guess = document.querySelector('.guess').value;
 
-  if (guess > answer) {
-    document.querySelector('.message').textContent = '📈 Muito alto!';
-    score -= 1;
-    document.querySelector('.score').innerHTML = score;
-  }
-
-  if (guess < answer) {
-    document.querySelector('.message').textContent = '📉 Muito baixo!';
+  if (guess !== answer) {
+    document.querySelector('.message').textContent =
+      guess > answer ? '📈 Muito alto!' : '📉 Muito baixo!';
     score -= 1;
     document.querySelector('.score').innerHTML = score;
   }
